@@ -2,6 +2,7 @@
 # Searcher for CYcles and FIxed points (SCYFI)
 We introduce a novel heuristic algorithm for detecting all fixed points and k-cycles in ReLU-based RNNs
 
+Preliminary, more Information, data and Notebooks for all the plots will follow shortly
 ## Table of Contents
 
 - [Getting Started](#getting-started)
@@ -18,7 +19,7 @@ These instructions will guide you through setting up the project environment and
 1. Clone this repository to your local machine:
 
    ```shell
-   git clone https://gitlab.zi.local/Lukas.Eisenmann/scyfi.git
+   git clone [https://github.com/DurstewitzLab/SCYFI]
    cd SCYFI
    ```
 
@@ -75,8 +76,4 @@ These instructions will guide you through setting up the project environment and
    julia --project=. main.jl
    ```
 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 
