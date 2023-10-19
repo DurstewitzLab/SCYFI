@@ -3,8 +3,10 @@ using Base.Threads
 using ProgressMeter
 using CSV
 using JLD2
-
-#using Pandas
+"""
+This package contains the code from [Eisenmann L., Monfared M., Göring N., Durstewitz D. Bifurcations and loss jumps in RNN training, Thirty-seventh Conference on Neural Information Processing Systems, 2023,
+{https://openreview.net/forum?id=QmPf29EHyI}]. Please cite this work when using the code provided herewith
+"""
 
 """ 
 calculate the cycles for a 2D PLRNN on a 2D parameter grid up until order k
