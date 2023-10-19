@@ -1,13 +1,14 @@
 using SCYFI
-using BPTT
-
 using Base.Threads
 using ProgressMeter
 using CSV
 using Base.Threads
 using JLD2: save
 
-
+"""
+This package contains the code from [Eisenmann L., Monfared M., Göring N., Durstewitz D. Bifurcations and loss jumps in RNN training, Thirty-seventh Conference on Neural Information Processing Systems, 2023,
+{https://openreview.net/forum?id=QmPf29EHyI}]. Please cite this work when using the code provided herewith
+"""
 
 """ 
 calculate the cycles along a trajectory up until order k, for anything higher dmensional than 2d the standard hyperparameters for the loops will not be large enough and have to be tuned again
@@ -31,10 +32,8 @@ function main_trajectory(
     println("starting calculation")
     println("Using ", Threads.nthreads()," threats")
     Threads.@threads for i in eachindex(model_numbers)
-        #model = load_model(experiment_path*"/model_"*string(val)*".bson")
         val=model_numbers[i]
-        result[i] = find_cycles(diagm(data["A"][val]),data["W"][val],data["h"][val],order, outer_loop_iterations= outer_loop_iterations,inner_loop_iterations=inner_loop_iterations) 
-        #push!(df, ((length(result[i][1]),result[i][1],result[i][2],data["A"][val],data["W"][val],data["h"][val])))      
+        result[i] = find_cycles(diagm(data["A"][val]),data["W"][val],data["h"][val],order, outer_loop_iterations= outer_loop_iterations,inner_loop_iterations=inner_loop_iterations)  
         next!(p)
     end
 
