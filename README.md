@@ -1,5 +1,8 @@
 
 # Searcher for CYcles and FIxed points (SCYFI)
+This package contains the code from [Eisenmann L., Monfared M., Göring N., Durstewitz D. Bifurcations and loss jumps in RNN training, Thirty-seventh Conference on Neural Information Processing Systems, 2023,
+{https://openreview.net/forum?id=QmPf29EHyI}]. Please cite this work when using the code provided herewith.
+
 We introduce a novel heuristic algorithm for detecting all fixed points and k-cycles in ReLU-based RNNs
 
 Preliminary, more Information, data and Notebooks for all the plots will follow shortly
